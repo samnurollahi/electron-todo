@@ -13,3 +13,47 @@ electron.ipcMain.handle("addTodo", async (e, todo) => {
     return { msg: "no", error: err };
   }
 });
+
+electron.ipcMain.handle("getTodos", async () => {
+  try {
+    const todos = await Todo.findAll();
+    return { msg: "ok", todos };
+  } catch (err) {
+    console.log(err);
+    return { msg: "no", error: err };
+  }
+});
+
+electron.ipcMain.handle("deleteTodo", async (e, id) => {
+  try {
+    await Todo.destroy({
+      where: {
+        id,
+      },
+    });
+
+    return { msg: "ok" };
+  } catch (err) {
+    console.log(err);
+    return { msg: "no", error: err };
+  }
+});
+
+electron.ipcMain.handle("comTodo", async (e, id) => {
+  try {
+    await Todo.update(
+      {
+        check: true,
+      },
+      {
+        where: {
+          id,
+        },
+      }
+    );
+    return { msg: "ok" };
+  } catch (err) {
+    console.log(err);
+    return { msg: "no", error: err };
+  }
+});

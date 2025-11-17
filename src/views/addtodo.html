@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add todo</title>
+
+    <!-- tailwind -->
+    <link rel="stylesheet" href="./style/output.css" />
+  </head>
+  <body>
+    <div>
+      <label for="todo" class="text-center block mt-3 m-auto">title todo</label>
+      <input
+        id="todo"
+        type="text"
+        placeholder="todo"
+        class="block m-auto my-3 px-1 py-0.5 border outline-0 rounded-sm bg-stone-100 transition focus:bg-white"
+      />
+
+      <button
+        id="btnAddTodo"
+        class="bg-indigo-500 text-white px-3 py-.5 rounded-2xl cursor-pointer block m-auto transition hover:bg-indigo-400"
+      >
+        add todo
+      </button>
+    </div>
+
+    <script src="./script/addTodo.js"></script>
+  </body>
+</html>

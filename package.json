@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ./src/app.js",
+    "tailwind": "npx @tailwindcss/cli -i ./src/views/style/input.css -o ./src/views/style/output.css --watch"
+  },
+  "keywords": [],
+  "author": "sam",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@sequelize/sqlite3": "^7.0.0-alpha.47",
+    "@tailwindcss/cli": "^4.1.17",
+    "electron": "^39.1.2",
+    "sequelize": "^6.37.7",
+    "tailwindcss": "^4.1.17"
+  }
+}

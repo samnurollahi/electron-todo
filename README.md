@@ -54,7 +54,7 @@ package.json    → Project metadata and dependencies
 <ul>
   <li>Electron</li>
   <li>HTML5 & CSS3</li>
-  <li>Vanilla JavaScript</li>
+  <li>JavaScript</li>
 </ul>
 
 <h2>📄 License</h2>

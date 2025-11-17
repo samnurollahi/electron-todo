@@ -23,6 +23,9 @@ const addTodo = () => {
       preload: path.join(app.getAppPath(), "preload", "preload.js"),
       contextIsolation: true,
     },
+
+    parent: mainWindow,
+    modal: true,
   });
 
   addTodoWindow.loadFile("./views/addtodo.html");
@@ -53,6 +56,7 @@ module.exports = main = () => {
       preload: path.join(app.getAppPath(), "preload", "preloadMainwindow.js"),
       contextIsolation: true,
     },
+    // modal: addTodoWindow,
   });
 
   //? set menu

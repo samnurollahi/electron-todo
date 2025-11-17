@@ -5,3 +5,8 @@ contextBridge.exposeInMainWorld("myApi", {
   deleteTodo: async (id) => await ipcRenderer.invoke("deleteTodo", id),
   comTodo: async (id) => await ipcRenderer.invoke("comTodo", id),
 });
+
+ipcRenderer.send("pos", {
+  x: localStorage.getItem("x"),
+  y: localStorage.getItem("y"),
+});
